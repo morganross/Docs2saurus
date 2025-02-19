@@ -1,4 +1,4 @@
-# Doctosaurus-
+# Docstosaurus-
 Create files and folder structure using a text editor.
 
 Example use case: Convert a text document to files for Docusaurus.
