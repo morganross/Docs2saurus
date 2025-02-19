@@ -6,9 +6,9 @@ Example use case: Convert a text document to files for Docusaurus.
 
 # Docstosaurus
 
-Write a nested list and Docstosaurus will convert it to a hierarchy directoiy structure, files and their content.
+Write a nested list and Docstosaurus will convert it to a hierarchy directory structure, files and their content.
 
-By default, Docusaurus will remove the number prefix from the doc id, title, label, and URL paths.
+* Use a numbered list to organize for docusourus. By default, Docusaurus will remove the number prefix from the doc id, title, label, and URL paths.
 
 ## Directory Structure
 
