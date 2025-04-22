@@ -4,7 +4,7 @@ Create files and folder structure using a text editor.
 Example use case: Convert a text document to files for Docusaurus.
 
 
-# Docstosaurus
+# Docs2saurus
 
 Write a nested list and Docstosaurus will convert it to a hierarchy directory structure, files and their content.
 
