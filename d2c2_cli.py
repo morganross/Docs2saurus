@@ -27,7 +27,7 @@ def sanitize_and_clean_name(name, max_length=20):
     """
     # Combine regex operations to remove periods, invalid characters, preserve double asterisks
     name = re.sub(r'^[\.\-]+\s*|[<>:"/\\|?()]', '', name).strip()
-    name = name.replace('.', '_')
+    name = re.sub(r'\.+', '_', name)
     # Remove trailing spaces
     name = name.rstrip()
 
@@ -118,6 +118,11 @@ def categorize_lines(list_content):
     root = {'Children': [], 'BodyLines': [], 'UniqueID': 'root'}
 
     for line_number, line in enumerate(list_content, 1):
+        # Check if the line should be ignored based on the new rule
+        if line_number <= 3 and line.strip().startswith('title:'):
+            logging.info(f"Ignoring line {line_number} as it starts with 'title:' within the first 3 lines.")
+            continue # Skip this line
+
         # Preserve original line for body lines
         original_line = line.rstrip()
         # Sanitize and clean the line for structure determination
